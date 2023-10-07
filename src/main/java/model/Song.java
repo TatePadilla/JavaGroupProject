@@ -5,47 +5,30 @@
  */
 package model;
 
-
-public class Song {
-    private String name;
-    private String album;
-    private String band;
+class Song extends Album { //child of Album
+    private String songName;
     
-    public Song() {
+    public Song() { //default constructor
+        super(); 
+        songName = "Unknown Song";
     }
 
-    public Song(String name, String album, String band) {
-        this.name = name;
-        this.album = album;
-        this.band = band;
+    public Song(String albumName, String bandName, String songName) { //parameter constructor
+        super(albumName, bandName); 
+        this.songName = songName;
     }
 
-    public String getName() {
-        return name;
+    public String getSongName() { //getters and setters
+        return songName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setSongName(String songName) {
+        this.songName = songName;
     }
-
-    public String getAlbum() {
-        return album;
+    
+    public void displaySong() { //display() method
+        System.out.println("Song Name: " + songName);
+        System.out.println("Album Name: " + getAlbumName()); 
+        System.out.println("Band Name: " + getBandName());   
     }
-
-    public void setAlbum(String album) {
-        this.album = album;
-    }
-
-    public String getBand() {
-        return band;
-    }
-
-    public void setBand(String band) {
-        this.band = band;
-    }
-
-    public String Display() {
-        return "Song: " + name + ", Album: " + album + ", Band: " + band;
-    }
-
 }
