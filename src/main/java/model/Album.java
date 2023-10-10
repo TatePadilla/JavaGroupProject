@@ -1,43 +1,73 @@
 /**
- * @author chris - chtutje@dmacc.edu
+ * @author chris - chtutje@dmacc.edu & Tate - tlpadilla
  * CIS175 - Fall 2023
  * Oct 7, 2023
  */
+
 package model;
 
+import java.util.List;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+
+@Entity(name = "album")
+@Table(name = "album")
 class Album {
-    private String albumName;
-    private String bandName;
-    
-    public Album() { //default constructor
-        albumName = "Unknown Album";
-        bandName = "Unknown Band";
-    }
+	// Creating foreign key for one to many relationship
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int albumId;
+	private String albumName;
+	private String bandName;
 
-    public Album(String albumName, String bandName) { //parameter constructor
-        this.albumName = albumName;
-        this.bandName = bandName;
-    }
+	// Creating one to many relationship with songs
+	@OneToMany(mappedBy = "album", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+	private List<Song> song;
 
-    public String getAlbumName() { //getters and setters
-        return albumName;
-    }
-    
-    public void setAlbumName(String albumName) {
-        this.albumName = albumName;
-    }
+	public Album() { // default constructor
+		albumName = "Unknown Album";
+		bandName = "Unknown Band";
+	}
 
-    public String getBandName() {
-        return bandName;
-    }
-    
-    public void setBandName(String bandName) {
-        this.bandName = bandName;
-    }
-    
-    public void displayAlbum() { //bonus display() method
-        System.out.println("Album Name: " + albumName);
-        System.out.println("Band Name: " + bandName);
-    }
-    
+	public Album(String albumName, String bandName) { // parameter constructor
+		this.albumName = albumName;
+		this.bandName = bandName;
+	}
+
+	public int getRvId() { // getters and setters
+		return albumId;
+	}
+
+	public void setRvId(int albumId) {
+		this.albumId = albumId;
+	}
+
+	public String getAlbumName() {
+		return albumName;
+	}
+
+	public void setAlbumName(String albumName) {
+		this.albumName = albumName;
+	}
+
+	public String getBandName() {
+		return bandName;
+	}
+
+	public void setBandName(String bandName) {
+		this.bandName = bandName;
+	}
+
+	public void displayAlbum() { // bonus display() method
+		System.out.println("Album Name: " + albumName);
+		System.out.println("Band Name: " + bandName);
+	}
+
 }
