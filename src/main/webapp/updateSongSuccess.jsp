@@ -4,11 +4,11 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Song Added</title>
+    <title>Update Song Success</title>
 </head>
 <body>
-    <h1>Song Added Successfully</h1>
-	<p>${message}</p>
+    <h1>Song Updated Successfully</h1>
+    <p>The song has been updated.</p>
     <p><a href="index.html">Back to Home</a></p>
 </body>
 </html>
