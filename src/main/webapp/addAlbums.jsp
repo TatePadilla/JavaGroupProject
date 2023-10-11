@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>Add an Album</h1>
-    <form action="AddAlbumServlet" method="post">
+    <form action="addAlbum" method="post">
         <label for="albumName">Album Name:</label>
         <input type="text" id="albumName" name="albumName" required><br><br>
         

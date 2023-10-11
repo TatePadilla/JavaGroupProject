@@ -9,7 +9,7 @@
 <body>
     <h1>Update Album</h1>
     
-    <form action="UpdateAlbum" method="post">
+    <form action="updateAlbum" method="post">
         <label for="albumId">Enter Album ID:</label>
         <input type="text" id="albumId" name="id">
         <br>

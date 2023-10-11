@@ -44,6 +44,6 @@ public class updateAlbum extends HttpServlet {
             e.printStackTrace();
         }
 
-        response.sendRedirect("showAlbum.jsp");
+        response.sendRedirect("updateAlbumSuccess.jsp");
     }
 }

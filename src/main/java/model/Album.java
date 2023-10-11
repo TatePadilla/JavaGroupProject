@@ -21,8 +21,8 @@ public class Album {
 	private String bandName;
 
 	// Creating one to many relationship with songs
-	@OneToMany(mappedBy = "album", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-	private List<Song> song;
+	//@OneToMany(mappedBy = "album", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+	//private List<Song> song;
 
 	public Album() { // default constructor
 		albumName = "Unknown Album";

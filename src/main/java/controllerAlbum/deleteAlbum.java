@@ -40,6 +40,6 @@ public class deleteAlbum extends HttpServlet {
             e.printStackTrace();
         }
 
-        response.sendRedirect("showAlbum.jsp");
+        response.sendRedirect("deleteAlbumSuccess.jsp");
     }
 }
