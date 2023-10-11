@@ -15,7 +15,7 @@ import javax.persistence.Table;
 
 @Entity(name = "song")
 @Table(name = "song")
-class Song extends Album { // child of Album
+public class Song extends Album { // child of Album
 	@Id // Creating foreign key for many to one relationship
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int songId;
@@ -30,10 +30,13 @@ class Song extends Album { // child of Album
 		songName = "Unknown Song";
 	}
 
-	public Song(String albumName, String bandName, String songName) { // parameter constructor
+	/*
+	 * Is this needed??
+	 * public Song(String albumName, String bandName, String songName) { // parameter constructor
 		super(albumName, bandName);
 		this.songName = songName;
 	}
+	*/
 
 	public int getSongId() { // getters and setters
 		return songId;
@@ -50,10 +53,20 @@ class Song extends Album { // child of Album
 	public void setSongName(String songName) {
 		this.songName = songName;
 	}
+	
+	public Album getAlbum() {
+		return album;
+	}
+
+	public void setAlbum(Album album) {
+		this.album = album;
+	}
 
 	public void displaySong() { // display() method
-		System.out.println("Song Name: " + songName);
+		System.out.println("Song ID: " + getSongId());
+		System.out.println("Song Name: " + songName); // Does this need to be getSongName or just songName???
 		System.out.println("Album Name: " + getAlbumName());
+		System.out.println("Album ID: " + getAlbumId());
 		System.out.println("Band Name: " + getBandName());
 	}
 }

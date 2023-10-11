@@ -19,7 +19,7 @@ import javax.persistence.Table;
 
 @Entity(name = "album")
 @Table(name = "album")
-class Album {
+public class Album {
 	// Creating foreign key for one to many relationship
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -35,17 +35,20 @@ class Album {
 		albumName = "Unknown Album";
 		bandName = "Unknown Band";
 	}
-
+	
+	/*
+	 * Is this needed??
 	public Album(String albumName, String bandName) { // parameter constructor
 		this.albumName = albumName;
 		this.bandName = bandName;
 	}
+	*/
 
-	public int getRvId() { // getters and setters
+	public int getAlbumId() { // getters and setters
 		return albumId;
 	}
 
-	public void setRvId(int albumId) {
+	public void setAlbumId(int albumId) {
 		this.albumId = albumId;
 	}
 
@@ -66,6 +69,7 @@ class Album {
 	}
 
 	public void displayAlbum() { // bonus display() method
+		System.out.println("Album ID: " + albumName); //Does this need to be getAlbumName or just albumName???
 		System.out.println("Album Name: " + albumName);
 		System.out.println("Band Name: " + bandName);
 	}
