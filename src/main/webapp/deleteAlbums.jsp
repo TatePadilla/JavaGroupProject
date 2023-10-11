@@ -9,7 +9,7 @@
 <body>
     <h1>Delete Album</h1>
     
-    <form action="DeleteAlbumServlet" method="get">
+    <form action="deleteAlbum" method="get">
         <label for="albumId">Enter Album ID:</label>
         <input type="text" id="albumId" name="id">
         <input type="submit" value="Delete">

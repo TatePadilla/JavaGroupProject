@@ -31,6 +31,6 @@ public class addAlbum extends HttpServlet {
         em.getTransaction().commit();
         em.close();
         
-        response.sendRedirect("addAlbum.jsp"); 
+        response.sendRedirect("addAlbumSuccess.jsp"); 
     }
 }

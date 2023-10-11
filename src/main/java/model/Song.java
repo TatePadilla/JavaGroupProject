@@ -3,6 +3,9 @@
  * CIS175 - Fall 2023
  * Oct 7, 2023
  */
+
+
+/*
 package model;
 
 import javax.persistence.*;
@@ -16,21 +19,13 @@ public class Song extends Album { // child of Album
 	private String songName;
 
 	@ManyToOne // Creating many to one relationship with Album
-	@JoinColumn(name = "ALBUMID", nullable = false)
+	@JoinColumn(name = "ALBUMID", referencedColumnName = "ALBUMID", nullable = false)
 	private Album album = new Album();
 
 	public Song() { // default constructor
 		super();
 		songName = "Unknown Song";
 	}
-
-	/*
-	 * Is this needed??
-	 * public Song(String albumName, String bandName, String songName) { // parameter constructor
-		super(albumName, bandName);
-		this.songName = songName;
-	}
-	*/
 
 	public int getSongId() { // getters and setters
 		return songId;
@@ -64,3 +59,5 @@ public class Song extends Album { // child of Album
 		System.out.println("Band Name: " + getBandName());
 	}
 }
+
+*/
