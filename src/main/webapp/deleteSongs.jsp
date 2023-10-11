@@ -4,11 +4,14 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Song Added</title>
+    <title>Delete Song</title>
 </head>
 <body>
-    <h1>Song Added Successfully</h1>
-	<p>${message}</p>
+    <h1>Delete Song</h1>
+    <form action="deleteSong" method="post">
+        Song ID: <input type="text" name="songId"><br>
+        <input type="submit" value="Delete Song">
+    </form>
     <p><a href="index.html">Back to Home</a></p>
 </body>
 </html>
