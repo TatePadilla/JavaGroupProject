@@ -5,13 +5,7 @@
  */
 package model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity(name = "song")
 @Table(name = "song")
@@ -64,7 +58,7 @@ public class Song extends Album { // child of Album
 
 	public void displaySong() { // display() method
 		System.out.println("Song ID: " + getSongId());
-		System.out.println("Song Name: " + songName); // Does this need to be getSongName or just songName???
+		System.out.println("Song Name: " + getSongName()); 
 		System.out.println("Album Name: " + getAlbumName());
 		System.out.println("Album ID: " + getAlbumId());
 		System.out.println("Band Name: " + getBandName());
