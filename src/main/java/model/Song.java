@@ -5,21 +5,21 @@
  */
 
 
-/*
+
 package model;
 
 import javax.persistence.*;
 
 @Entity(name = "song")
 @Table(name = "song")
-public class Song extends Album { // child of Album
-	@Id // Creating foreign key for many to one relationship
+public class Song { 
+	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int songId;
 	private String songName;
 
 	@ManyToOne // Creating many to one relationship with Album
-	@JoinColumn(name = "ALBUMID", referencedColumnName = "ALBUMID", nullable = false)
+	@JoinColumn(name = "ALBUMID", referencedColumnName = "albumId", nullable = false)
 	private Album album = new Album();
 
 	public Song() { // default constructor
@@ -51,13 +51,7 @@ public class Song extends Album { // child of Album
 		this.album = album;
 	}
 
-	public void displaySong() { // display() method
-		System.out.println("Song ID: " + getSongId());
-		System.out.println("Song Name: " + getSongName()); 
-		System.out.println("Album Name: " + getAlbumName());
-		System.out.println("Album ID: " + getAlbumId());
-		System.out.println("Band Name: " + getBandName());
-	}
+
 }
 
-*/
+

@@ -8,12 +8,17 @@
 </head>
 <body>
     <h1>Add Song</h1>
+    
     <form action="addSong" method="post">
-        Song Name: <input type="text" name="songName"><br>
-        Album Name: <input type="text" name="albumName"><br>
-        Band Name: <input type="text" name="bandName"><br>
+        <label for="songName">Song Name:</label>
+        <input type="text" id="songName" name="songName">
+        <br>
+        <label for="albumId">Album ID:</label>
+        <input type="text" id="albumId" name="albumId">
+        <br>
         <input type="submit" value="Add Song">
     </form>
-    <p><a href="index.html">Back to Home</a></p>
+    
+    <p><a href="index.html">Back</a></p>
 </body>
 </html>
