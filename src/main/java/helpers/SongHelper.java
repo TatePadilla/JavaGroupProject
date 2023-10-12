@@ -14,7 +14,7 @@ import javax.persistence.TypedQuery;
 import model.Song;
 
 public class SongHelper {
-	EntityManagerFactory emFactory = Persistence.createEntityManagerFactory("Albums");
+	EntityManagerFactory emFactory = Persistence.createEntityManagerFactory("JavaGroupProject");
 	AlbumHelper albumHelper = new AlbumHelper();
 	
 	public void add(Song model) {

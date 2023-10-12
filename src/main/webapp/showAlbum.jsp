@@ -12,13 +12,11 @@
 	<table>
 		<c:forEach items="${requestScope.allAlbums}" var="currentalbum">
 			<tr>
-				<td>${currentalbum.albumName}|</td>
+				<td>${currentalbum.albumName} | </td>
 				<td>${currentalbum.bandName}</td>
 			</tr>
 			<c:forEach items="${currentalbum.song}" var="currentsong">
-					<tr>
-						<td>${currentsong.songName}|</td>
-					</tr>
+					
 				</c:forEach>
 		</c:forEach>
 		

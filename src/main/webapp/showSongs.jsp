@@ -17,7 +17,7 @@
 				<td>Song Title: ${currentsong.songName} |
 					<p>__________________________</p>
 				</td>
-				
+				<td>Album Name: ${currentfsong.Album.albumName} <p>__________________________</p></td>
 			</tr>
 		</c:forEach>
 	</table>
