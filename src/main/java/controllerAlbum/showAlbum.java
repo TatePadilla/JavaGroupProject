@@ -46,7 +46,7 @@ public class showAlbum extends HttpServlet {
 
 		request.setAttribute("allAlbums", albumList);
 
-		String path = "/showAlbum.jsp";
+		String path = "/showAlbums.jsp";
 
 		getServletContext().getRequestDispatcher(path).forward(request, response);
 	}
