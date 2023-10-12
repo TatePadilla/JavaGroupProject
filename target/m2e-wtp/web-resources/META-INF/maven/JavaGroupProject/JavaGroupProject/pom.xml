@@ -55,10 +55,5 @@
             <artifactId>jstl</artifactId>
             <version>1.2</version>
         </dependency>
-        <dependency>
-		    <groupId>org.hibernate</groupId>
-		    <artifactId>hibernate-entitymanager</artifactId>
-		    <version>4.2.6.Final</version>
-		</dependency>
      </dependencies>
 </project>
