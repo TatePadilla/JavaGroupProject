@@ -13,6 +13,7 @@ import javax.persistence.*;
 import java.io.IOException;
 import model.Album; 
 
+@SuppressWarnings("serial")
 @WebServlet("/addAlbum") 
 public class addAlbum extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

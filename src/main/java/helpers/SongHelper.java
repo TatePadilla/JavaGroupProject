@@ -33,11 +33,12 @@ public class SongHelper {
 	}
 	@SuppressWarnings("unchecked")
 	public List<Song> show() {
+		System.out.println("We made it to song helper");
 		EntityManager manager = emFactory.createEntityManager();
 		List<Song> allItems = manager.createQuery("SELECT i FROM song i").getResultList();
 		manager.close();
+		System.out.println("We made out of song helper");
 		return allItems;
-
 	}
 
 	public void update(Song model) {
