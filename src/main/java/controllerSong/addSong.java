@@ -39,8 +39,8 @@ public class addSong extends HttpServlet {
                 request.setAttribute("message", "Song added successfully!");
                 request.getRequestDispatcher("addSongSuccess.jsp").forward(request, response);
             } else {
-                request.setAttribute("error", "Album not found");
-                request.getRequestDispatcher("addSongs.jsp").forward(request, response);
+                request.setAttribute("error", "Album not found, use a valid ID");
+                request.getRequestDispatcher("addSongs.jsp").forward(request, response); 
             }
         } finally {
             em.close();
