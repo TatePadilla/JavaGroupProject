@@ -19,6 +19,12 @@
         <input type="submit" value="Add Song">
     </form>
     
+    <div class="error-message">
+        <c:if test="${not empty error}">
+            ${error}
+        </c:if>
+    </div>
+    
     <p><a href="index.html">Back</a></p>
 </body>
 </html>
