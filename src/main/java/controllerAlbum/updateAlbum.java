@@ -14,7 +14,9 @@ import model.Album;
 
 @WebServlet("/updateAlbum")
 public class updateAlbum extends HttpServlet {
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	private static final long serialVersionUID = -1314012208527845866L;
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String albumIdStr = request.getParameter("id");
         String newAlbumName = request.getParameter("albumName");
         String newBandName = request.getParameter("bandName");
