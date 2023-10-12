@@ -21,7 +21,7 @@ import javax.persistence.TypedQuery;
 import model.Album;
 
 public class AlbumHelper {
-	EntityManagerFactory emFactory = Persistence.createEntityManagerFactory("Albums");
+	EntityManagerFactory emFactory = Persistence.createEntityManagerFactory("JavaGroupProject");
 		
 	public void add(Album type) {
 		EntityManager manager = emFactory.createEntityManager();

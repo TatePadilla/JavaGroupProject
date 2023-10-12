@@ -8,9 +8,9 @@
 <body>
 	<h1>Record Store Home Page</h1>
 	<p>Welcome to the record store
-	<p>
-	<a href="showSongs.jsp"><button>Show Songs</button></a>
-	<p>
+	<p><form action="showSong" method="get">
+		<input type="submit" value="Show Songs" />
+	</form></p>
 		<a href="updateSongs.jsp">
 			<button>Update Existing Songs</button>
 		</a>
@@ -22,12 +22,14 @@
 		<a href="addSongs.jsp"><button>Add New Songs</button></a>
 	</p>
 
-		<a href="showAlbum.jsp"><button>Show Albums</button></a>
+	<form action="showAlbum" method="get">
+		<input type="submit" value="Show Albums" />
+	</form>
 	<p>
 		<a href="updateAlbums.jsp"><button>Update Albums</button></a>
 	</p>
 	<p>
-		<a href="deleteAlbums.jsp"><button>Delete Albums's</button></a>
+		<a href="deleteAlbums.jsp"><button>Delete Albums</button></a>
 	</p>
 	<p>
 		<a href="addAlbums.jsp"><button>Add Album's</button></a>

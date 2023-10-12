@@ -43,9 +43,9 @@ public class showSong extends HttpServlet {
 		// TODO Auto-generated method stub
 		System.out.println("We made it to Show song - DoGET");
 		SongHelper helper = new SongHelper();
-		
-		List<Song> songList = helper.show();
 		System.out.println("We made back from song helper");
+		List<Song> songList = helper.show();
+		
 		request.setAttribute("allSongs", songList);
 
 		String path = "/showSongs.jsp";
