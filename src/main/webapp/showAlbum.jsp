@@ -16,7 +16,7 @@
 				<td>${currentalbum.bandName}</td>
 			</tr>
 			<c:forEach items="${currentalbum.song}" var="currentsong">
-					
+					<td>${currentsong.songName} |</td>
 				</c:forEach>
 		</c:forEach>
 		

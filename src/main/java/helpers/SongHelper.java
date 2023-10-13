@@ -33,11 +33,11 @@ public class SongHelper {
 	}
 	@SuppressWarnings("unchecked")
 	public List<Song> show() {
-		System.out.println("We made it to song helper");
+		
 		EntityManager manager = emFactory.createEntityManager();
 		List<Song> allItems = manager.createQuery("SELECT i FROM song i").getResultList();
 		manager.close();
-		System.out.println("We made out of song helper");
+		
 		return allItems;
 	}
 
@@ -55,7 +55,7 @@ public class SongHelper {
 
 	}
 
-	public Song searchFifthWheelByName(String oldSongName) {
+	public Song searchSongByName(String oldSongName) {
 		EntityManager manager = emFactory.createEntityManager();
 		TypedQuery<Song> query = manager.createQuery("SELECT i FROM song AS i WHERE i.songName = :songName", Song.class);
 		query.setParameter("songName", oldSongName);

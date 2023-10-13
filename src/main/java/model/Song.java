@@ -8,6 +8,7 @@
 
 package model;
 
+
 import javax.persistence.*;
 
 @Entity(name = "song")
@@ -19,7 +20,7 @@ public class Song {
 	private String songName;
 
 	@ManyToOne // Creating many to one relationship with Album
-	@JoinColumn(name = "ALBUMID", referencedColumnName = "albumId", nullable = false)
+	@JoinColumn(name = "ALBUMID", nullable = false)
 	private Album album = new Album();
 
 	public Song() { // default constructor

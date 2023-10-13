@@ -41,14 +41,15 @@ public class showSong extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		System.out.println("We made it to Show song - DoGET");
+		
 		SongHelper helper = new SongHelper();
-		System.out.println("We made back from song helper");
+		
 		List<Song> songList = helper.show();
 		
 		request.setAttribute("allSongs", songList);
 
 		String path = "/showSongs.jsp";
+		System.out.println(songList);
 		
 		getServletContext().getRequestDispatcher(path).forward(request, response);
 	}
