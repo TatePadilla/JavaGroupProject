@@ -15,9 +15,9 @@
 		<c:forEach items="${requestScope.allSongs}" var="currentsong">
 			<tr>
 				<td>Song Title: ${currentsong.songName} |
-					<p>__________________________</p>
+					<p>______________________</p>
 				</td>
-				<td>Album Name: ${currentfsong.Album.albumName} <p>__________________________</p></td>
+				<td>Album Name: ${currentsong.album.albumName} <p>_____________________</p></td>
 			</tr>
 		</c:forEach>
 	</table>

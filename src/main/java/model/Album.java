@@ -24,12 +24,6 @@ public class Album {
 	@OneToMany(mappedBy = "album", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
 	private List<Song> song;
 
-	public Album() { // default constructor
-		albumName = "Unknown Album";
-		bandName = "Unknown Band";
-	}
-	
-
 	public int getAlbumId() { // getters and setters
 		return albumId;
 	}
@@ -54,10 +48,11 @@ public class Album {
 		this.bandName = bandName;
 	}
 
-	public void displayAlbum() { // bonus display() method
-		System.out.println("Album ID: " + albumName); //Does this need to be getAlbumName or just albumName???
-		System.out.println("Album Name: " + albumName);
-		System.out.println("Band Name: " + bandName);
+	public List<Song> getSong() {
+		return song;
+	}
+	public void setSong(List<Song> song) {
+		this.song = song;
 	}
 
 }
