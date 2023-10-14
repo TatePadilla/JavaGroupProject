@@ -13,6 +13,11 @@
         <label for="songName">Song Name:</label>
         <input type="text" id="songName" name="songName">
         <br>
+        
+        <label for="songCreatedDate">Song Created Date:</label>
+        <input type="text" id="songCreatedDate" name="songCreatedDate">
+        <br>
+        
         <label for="albumId">Album ID:</label>
         <input type="text" id="albumId" name="albumId">
         <br>

@@ -10,6 +10,7 @@ import javax.servlet.annotation.*;
 import javax.servlet.http.*;
 
 import java.io.IOException;
+import java.time.LocalDate;
 
 import javax.persistence.*;
 import model.Album;
@@ -20,6 +21,7 @@ import model.Song;
 public class addSong extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String songName = request.getParameter("songName");
+        LocalDate songCreatedDate = LocalDate.parse(request.getParameter("songCreatedDate"));
         int albumId = Integer.parseInt(request.getParameter("albumId"));
 
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("JavaGroupProject");
@@ -31,6 +33,7 @@ public class addSong extends HttpServlet {
             if (album != null) {
                 Song song = new Song();
                 song.setSongName(songName);
+                song.setSongCreatedDate(songCreatedDate);
                 song.setAlbum(album);
 
                 em.getTransaction().begin();

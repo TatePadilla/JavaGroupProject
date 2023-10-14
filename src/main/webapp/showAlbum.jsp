@@ -21,9 +21,12 @@
 			</tr>
 			
 			<c:forEach items="${currentalbum.song}" var="currentsong">
-			
-					<td>Song Name: ${currentsong.songName} <p>__________________</p></td>
-					
+				<tr>
+					<td>Song Name: ${currentsong.songName}</td>
+				</tr>
+				<tr>
+					<td>Song Created Date: ${currentsong.songCreatedDate} <p>__________________</p></td>
+				</tr>
 			</c:forEach>
 		</c:forEach>
 		
