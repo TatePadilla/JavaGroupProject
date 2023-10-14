@@ -14,10 +14,11 @@
 	<table>
 		<c:forEach items="${requestScope.allSongs}" var="currentsong">
 			<tr>
-				<td>Song Title: ${currentsong.songName} |
-					<p>______________________</p>
-				</td>
-				<td>Album Name: ${currentsong.album.albumName} <p>_____________________</p></td>
+				<td>Song Title: ${currentsong.songName} |<p>___________________________</p> </td>
+				
+				<td>Song Created Date: ${currentsong.songCreatedDate} |<p>___________________________</p></td>
+					
+				<td>Album Name: ${currentsong.album.albumName} <p>___________________________</p></td>
 			</tr>
 		</c:forEach>
 	</table>
