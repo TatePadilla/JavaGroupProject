@@ -15,6 +15,7 @@ import javax.persistence.*;
 import model.Album;
 import model.Song;
 
+@SuppressWarnings("serial")
 @WebServlet("/addSong")
 public class addSong extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

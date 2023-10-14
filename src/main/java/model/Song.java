@@ -9,6 +9,8 @@
 package model;
 
 
+import java.time.LocalDate;
+
 import javax.persistence.*;
 
 @Entity(name = "song")
@@ -18,6 +20,7 @@ public class Song {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int songId;
 	private String songName;
+	private LocalDate songCreatedDate;
 
 	@ManyToOne // Creating many to one relationship with Album
 	@JoinColumn(name = "ALBUMID", nullable = false)
@@ -42,6 +45,14 @@ public class Song {
 
 	public void setSongName(String songName) {
 		this.songName = songName;
+	}
+	
+	public LocalDate getSongCreatedDate() {
+		return songCreatedDate;
+	}
+
+	public void setSongCreatedDate(LocalDate songCreatedDate) {
+		this.songCreatedDate = songCreatedDate;
 	}
 	
 	public Album getAlbum() {
